@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My URL manager</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        width: 250px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      #save-button, #open-all-button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 6px 12px;
+        margin: 2px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 13px;
+      }
+
+      #urls-list {
+        list-style: none;
+        padding: 0;
+      }
+      #urls-list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px 0;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      #urls-list li a {
+        flex-grow: 1;
+        text-decoration: none;
+        color: #333;
+        margin-right: 10px;
+      }
+      #urls-list li a:hover {
+        text-decoration: underline;
+      }
+      #urls-list li button {
+        background-color: #f44336;
+        color: white;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #urls-list li button:hover {
+        background-color: #ff6666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Daily Reading List</h1>
+    <div>
+      <button id="save-button">Save current URL</button>
+      <button id="open-all-button">Open all URLs</button>
+    </div>
+    <ul id="urls-list"></ul>
+    <script src="popup.js"></script>
+  </body>
+</html>
